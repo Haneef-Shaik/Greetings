@@ -1,0 +1,91 @@
+// .festival{
+//   position: relative;
+//   display: -webkit-box;
+//   display: -ms-flexbox;
+//   display: flex;
+//   -webkit-box-orient: vertical;
+//   -webkit-box-direction: normal;
+//       -ms-flex-direction: column;
+//           flex-direction: column;
+//   -webkit-box-pack: center;
+//       -ms-flex-pack: center;
+//           justify-content: center;
+//   -webkit-box-align: center;
+//       -ms-flex-align: center;
+//           align-items: center;
+//   height: 100vh;
+//   width: 100vw;
+//   background-size: 100% 100% !important;
+//   background-repeat: no-repeat;
+//   background-position: center;
+//   margin: 0;
+//   padding: 0;
+// }
+
+// .festival-img h1, .festival-img h2 {
+//   margin: 0;
+//   margin: 3vh auto;
+//   color: yellow;
+//   text-shadow: -2px 2px 2px red;
+//   font-size: 2.5rem;
+//   font-family: 'Times New Roman', Times, serif;
+//   text-align: center;
+// }
+
+// .txt{
+//   color:whitesmoke;
+//   font-size:3rem;
+//   font-family: 'Times New Roman', Times, serif;
+//   text-shadow: -2px 2px 2px white;
+// }
+
+// .para{
+//   background-color: rgba(255, 255, 255, 0.568);
+//   text-indent: 15%;
+//   width: 90%;
+//   padding:5%;
+// }
+// /*# sourceMappingURL=style.css.map */
+.formContainer{
+  padding:5%;
+  min-height:100vh;
+  background-color:#4C4C4C;
+  // background: linear-gradient(#920000,#800000,#6D0000,#490000);
+  .myInp {
+      margin-top:2rem;
+      text-align:center;
+      font-family: 'Times New Roman', Times, serif;
+      font-size:1.6rem;
+      border:none;
+      
+      background-color:#fff;
+      border-radius:15px;
+      box-shadow: inset 4px -4px 0px #EABC32  ;
+      line-height:3rem;
+      width:100%;
+      &::placeholder{
+          color:#120E02;
+      }
+  }
+  form{
+      display: flex;
+      align-items:center;
+      justify-content: space-evenly;
+      flex-direction: column;
+      flex-wrap: wrap;
+
+  }
+  .bgImg:active{
+      border: 5px solid white;
+  }
+}
+.footerBanner{
+  width:100vw;
+}
+
+.btnhighlight:active, 
+.btnhighlight:focus 
+{
+  border:0.2em solid #00c; 
+   
+}

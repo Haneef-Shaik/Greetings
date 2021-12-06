@@ -1,0 +1,37 @@
+.festival{
+  position: relative;
+display: grid;
+align-items: center;
+height: 100vh;
+  width: 100vw;
+  background-size: 100% 100% !important;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+}
+
+.festival-img h1, .festival-img h2 {
+  margin: 0;
+  margin: 3vh auto;
+  color: yellow;
+  text-shadow: -3px 3px 2px #000;
+  font-size: 2.5rem;
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+}
+
+.txt{
+  color:whitesmoke;
+  font-size:3rem;
+  font-family: 'Times New Roman', Times, serif;
+  text-shadow: -4px 4px 2px #000;
+}
+
+.para{
+  background-color: rgba(255, 255, 255, 0.568);
+  text-indent: 15%;
+  width: 90%;
+  padding:5%;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,21 @@
+.formContainer{
+    padding:5%;
+    height:100vh;
+    background-color:#4C4C4C;
+    // background: linear-gradient(#920000,#800000,#6D0000,#490000);
+    input{
+        text-align:center;
+        font-family: 'Times New Roman', Times, serif;
+        font-size:1.6rem;
+        border:none;
+        border: 1px solid #fff;
+        background-color:transparent;
+        border-radius:15px;
+        box-shadow: inset 4px -8px 4px #EABC32;
+        line-height:3rem;
+    
+    }
+}
+textarea{
+    color: #fff;
+}

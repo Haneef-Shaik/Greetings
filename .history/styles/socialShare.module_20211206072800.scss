@@ -1,0 +1,47 @@
+.socialShare{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+    overflow: scroll;
+    .container{
+        background-color: gainsboro;
+        text-align: center;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        line-height:3rem;
+        width: 95vw;
+        margin: 0%;
+        
+
+        .url{
+            width:80vw;
+            margin: 0;
+            background-color:red;
+            color: white;
+            line-height:1rem;
+            overflow: hidden;
+            h5
+            {
+                width:80vw ;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+
+            }
+        }
+        .socialShareIcons{
+            padding:10%;
+            width:80vw;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            overflow-x: scroll;
+            span{
+                margin:2px 1px;
+            }
+        }
+    }
+}
