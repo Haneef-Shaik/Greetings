@@ -142,7 +142,7 @@ function Edit() {
                                 </div>
 
                                 <div className="footerBanner p-2 m-0 d-flex justify-content-around" style={{width: '100%'}}>
-                                        <Link href={`/preview?event=${festivalName  }&name=${ UserName==null?"name":UserName }&bgImg=${IMG1}&greeting=${desc} `}>
+                                        <Link href={`/preview?event=${festivalName  }&name=${ UserName==""?"name":UserName }&bgImg=${IMG1}&greeting=${desc} `}>
                                             <button type="submit" className="p-0" style={{backgroundColor:'#EABC32',boxShadow:'inset 4px -4px 8px #f0f0f0',width:'100%',borderRadius:'5px',color:'#000',position:'relative' }} > 
                                             <a style={{textDecoration: 'none',color:'#000',fontFamily:'Times New Roman',fontWeight:'bold',fontSize:'1.5rem'}}> Preview </a>
                                             
