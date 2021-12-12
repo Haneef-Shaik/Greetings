@@ -142,15 +142,12 @@ function Edit() {
                                 </div>
 
                                 <div className="footerBanner p-2 m-0 d-flex justify-content-around" style={{width: '100%'}}>
-                                        <Link href={`/preview?event=${festivalName  }&name=${ UserName==null?"name":UserName }&bgImg=${IMG1}&greeting=${desc} `}>
-                                            <button type="submit" className="p-0" style={{backgroundColor:'#EABC32',boxShadow:'inset 4px -4px 8px #f0f0f0',width:'100%',borderRadius:'5px',color:'#000',position:'relative' }} > 
-                                            <a style={{textDecoration: 'none',color:'#000',fontFamily:'Times New Roman',fontWeight:'bold',fontSize:'1.5rem'}}> Preview </a>
-                                            
+                                    <button type="submit" className="p-0" style={{backgroundColor:'#EABC32',boxShadow:'inset 4px -4px 8px #f0f0f0',width:'100%',borderRadius:'5px',color:'#000',position:'relative' }} > 
+                                        <Link href={`/preview?event=${festivalName  }&name=${ UserName==null?"name":UserName }&bgImg=${IMG1} `} style={{width:'100%',height:'100%',position:'absolute',display:'inline-block'}}><a style={{textDecoration: 'none',color:'#000',fontFamily:'Times New Roman',fontWeight:'bold',fontSize:'1.5rem',backgroundColor:'red',width:'100%',height:'100%'}}> Preview </a></Link>
                                     </button>
-                                            </Link>
                                     {/* <button className="px-4 py-2"  >  Share </button> */}
 
-                                    <Button variant="outlined" onClick={handleClickOpen} style={{backgroundColor:'#EABC32',boxShadow:'inset 4px -4px 8px #f0f0f0',width:'100%',borderRadius:'5px',color:'#000',fontWeight:'900',fontSize:'1.3rem',fontFamily:'Times New Roman'}} > Share </Button>
+                                    <Button variant="outlined" onClick={handleClickOpen} style={{backgroundColor:'#EABC32',boxShadow:'inset 4px -4px 8px #f0f0f0',width:'100%',borderRadius:'5px',color:'#000' }} >Share</Button>
                                         <Dialog
                                             open={open}
                                             TransitionComponent={Transition}

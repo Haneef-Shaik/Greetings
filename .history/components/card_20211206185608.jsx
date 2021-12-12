@@ -5,8 +5,8 @@ function Card(props) {
         return (
             <div>
                 <div className={styles.festival} style={{ backgroundImage: `url(${"/images/"+props.event+"/"+props.bgImage+".webp"})`,backgroundSize: "100%"} } >
-                    <h2 className= {styles.txt} style={{ color:`${props.color}`}}  >Happy {props.event}</h2>
-                    <h2 className= {styles.txt} style={{ color:`${props.color}`}} >From</h2>
+                    <h1 className= {styles.txt} style={{ color:`${props.color}`}}  >Happy {props.event}</h1>
+                    <h1 className= {styles.txt} style={{ color:`${props.color}`}} >From</h1>
                     <h1 className= {styles.txt} style={{ color:`${props.color}`}} > {props.name}</h1>
                     <h5 className={ styles.para} > {props.greeting}</h5>
                 </div>

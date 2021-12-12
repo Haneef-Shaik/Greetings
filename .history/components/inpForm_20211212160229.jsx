@@ -150,7 +150,7 @@ function Edit() {
                                             </Link>
                                     {/* <button className="px-4 py-2"  >  Share </button> */}
 
-                                    <Button variant="outlined" onClick={handleClickOpen} style={{backgroundColor:'#EABC32',boxShadow:'inset 4px -4px 8px #f0f0f0',width:'100%',borderRadius:'5px',color:'#000',fontWeight:'900',fontSize:'1.3rem',fontFamily:'Times New Roman'}} > Share </Button>
+                                    <Button variant="outlined" onClick={handleClickOpen} style={{backgroundColor:'#EABC32',boxShadow:'inset 4px -4px 8px #f0f0f0',width:'100%',borderRadius:'5px',color:'#000',fontWeight:'8000',fontSize:'1.2rem'}} > Share </Button>
                                         <Dialog
                                             open={open}
                                             TransitionComponent={Transition}
