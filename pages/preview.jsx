@@ -1,12 +1,24 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import Card from "../components/card";
-import {useRouter} from 'next/router';
+import { useRouter } from 'next/router';
+import LINK from 'next/link';
 import Modal from "react-modal";
 
-const Preview = (props) => {
+import SS from '../components/socialShare'
 
-  const {query} = useRouter();
-      const [seconds, setSeconds] = useState(0);
+
+import Button from '@mui/material/Button';
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogTitle from '@mui/material/DialogTitle';
+import Slide from '@mui/material/Slide';
+
+export default function Home() {
+    const {query} = useRouter();
+
+    const [seconds, setSeconds] = useState(0);
 
     const [isOpen, setIsOpen] = useState(true);
 
@@ -14,15 +26,14 @@ const Preview = (props) => {
         setIsOpen(!isOpen);
     }
 
-      useEffect(() => {
+    useEffect(() => {
         const interval = setInterval(() => {
             setSeconds(seconds => seconds + 1000);
         }, 1000);
         return () => clearInterval(interval);
     }, []);
 
-  
- const modalstyle = [
+    const modalstyle = [
 {
         overlay: {
             position: 'absolute',
@@ -43,7 +54,7 @@ const Preview = (props) => {
         }
     }
     ];
-      if(seconds/1000 < 2)
+    if(seconds/1000 < 2)
     {
 
         return (
@@ -65,14 +76,34 @@ const Preview = (props) => {
                 contentLabel="My dialog"
                 style={modalstyle}
                 >
-                    <SS mylink={`/display?event=${festivalName}&name=${UserName}&bgImg=${IMG1} `} />
+                     <Dialog
+                                            open={open}
+                                            TransitionComponent={Transition}
+                                            keepMounted
+                                            onClose={handleClose}
+                                            aria-describedby="alert-dialog-slide-description"
+                                        >
+                                        <DialogTitle>{"Share Link"}</DialogTitle>
+                                        <DialogContent>
+                                                <DialogContentText>Click the link to Copy to Clipboard </DialogContentText>
+                                        </DialogContent>
+                                        
+                                            <SS mylink={`/display?event=${festivalName}&name=${UserName}&bgImg=${IMG1} `} />
+                                        
+                                        </Dialog>
             </Modal>
 
             
             </>
-      
+        )
+    }
 
-    )
+
 }
 
-export default Preview;
+
+
+
+
+
+
