@@ -49,7 +49,7 @@ import styles from '../styles/socialShare.module.scss'
 
 function socialShareButton(props)
 {
-  const mysurl='greetings-lovat.vercel.app';
+  const mysurl='https://greet-wishes.vercel.app';
   const newURL = mysurl+props.mylink;
   return(
     <div className={styles.socialShare}>
