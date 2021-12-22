@@ -3,10 +3,10 @@ import Card from "../components/card";
 import { useRouter } from 'next/router';
 import LINK from 'next/link';
 import Modal from "react-modal";
-
 import SS from '../components/socialShare'
 
 
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
@@ -15,12 +15,15 @@ import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import Slide from '@mui/material/Slide';
 
-export default function Home() {
-    
-    const Transition = React.forwardRef(function Transition(props, ref) {
+
+
+const Transition = React.forwardRef(function Transition(props, ref) {
     return <Slide direction="up" ref={ref} {...props} />;
 });
-    
+
+export default function Home() {
+
+
     const {query} = useRouter();
 
     const [seconds, setSeconds] = useState(0);
@@ -30,6 +33,10 @@ export default function Home() {
     function toggleModal() {
         setIsOpen(!isOpen);
     }
+
+    const handleClose = () => {
+        setOpen(false);
+      };
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -81,8 +88,7 @@ export default function Home() {
                 contentLabel="My dialog"
                 style={modalstyle}
                 >
-
-                     <Dialog
+                                        <Dialog
                                             open={open}
                                             TransitionComponent={Transition}
                                             keepMounted
@@ -93,23 +99,15 @@ export default function Home() {
                                         <DialogContent>
                                                 <DialogContentText>Click the link to Copy to Clipboard </DialogContentText>
                                         </DialogContent>
-                                        
-                                            <SS mylink={`/display?event=${festivalName}&name=${UserName}&bgImg=${IMG1} `} />
-                                        
+                                                    <SS mylink={`/display?event=${query.event}&name=${query.name}&bgImg=${query.bgImg} `} />
                                         </Dialog>
-                                        
             </Modal>
 
+            
             </>
         )
     }
 
 
 }
-
-
-
-
-
-
 
