@@ -49,7 +49,7 @@ import styles from '../styles/socialShare.module.scss'
 
 function socialShareButton(props)
 {
-  const mysurl='greetings-lovat.vercel.app/';
+  const mysurl='greetings-lovat.vercel.app';
   const newURL = mysurl+props.mylink;
   return(
     <div className={styles.socialShare}>
@@ -67,33 +67,27 @@ function socialShareButton(props)
           </div>
 
           <span>
-              <WhatsappShareButton url={mysurl} title='Hey! Check it out ' >
+              <WhatsappShareButton url={newURL} title='Hey! Check it out ' >
                 <WhatsappIcon size={50} round={true} />
               </WhatsappShareButton>
           </span>
 
           <span>
-              <FacebookShareButton url={mysurl} quote='Hey! Check it out ' >
+              <FacebookShareButton url={newURL} quote='Hey! Check it out ' >
                 <FacebookIcon size={50} round={true} />
               </FacebookShareButton>
           </span>
           
           <span>
-              <TelegramShareButton url={mysurl} quote='Hey! Check it out ' >
+              <TelegramShareButton url={newURL} quote='Hey! Check it out ' >
                 <TelegramIcon size={50} round={true} />
               </TelegramShareButton>
           </span>
 
           <span>
-            <EmailShareButton subject='Hey! Check it out '  >
+            <EmailShareButton subject=`Hey! Check it out - {newURL} `  >
                 <EmailIcon size={50} round={true}/>
             </EmailShareButton>
-          </span>
-
-          <span>
-            <LinkedinShareButton >
-                <LinkedinIcon size={50} round={true}/>
-            </LinkedinShareButton>
           </span>
 
         </div>
