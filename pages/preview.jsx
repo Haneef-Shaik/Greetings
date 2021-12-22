@@ -27,9 +27,6 @@ const Preview = (props) => {
         }
     }
     ];
-    return (
-        <>
-      
       if(seconds/1000 < 2)
     {
 
@@ -59,7 +56,7 @@ const Preview = (props) => {
             </>
       
 
-    );
+    )
 }
 
 export default Preview;
