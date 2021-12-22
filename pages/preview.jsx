@@ -82,7 +82,21 @@ export default function Home() {
                 style={modalstyle}
                 >
 
-                    <SS mylink={`/display?event=${festivalName}&name=${UserName}&bgImg=${IMG1} `} />
+                     <Dialog
+                                            open={open}
+                                            TransitionComponent={Transition}
+                                            keepMounted
+                                            onClose={handleClose}
+                                            aria-describedby="alert-dialog-slide-description"
+                                        >
+                                        <DialogTitle>{"Share Link"}</DialogTitle>
+                                        <DialogContent>
+                                                <DialogContentText>Click the link to Copy to Clipboard </DialogContentText>
+                                        </DialogContent>
+                                        
+                                            <SS mylink={`/display?event=${festivalName}&name=${UserName}&bgImg=${IMG1} `} />
+                                        
+                                        </Dialog>
                                         
             </Modal>
 
