@@ -84,12 +84,6 @@ function socialShareButton(props)
               </TelegramShareButton>
           </span>
 
-          <span>
-            <EmailShareButton subject=`Hey! Check it out - {newURL} `  >
-                <EmailIcon size={50} round={true}/>
-            </EmailShareButton>
-          </span>
-
         </div>
       </div>
         
