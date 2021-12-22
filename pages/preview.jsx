@@ -6,6 +6,22 @@ import Modal from "react-modal";
 const Preview = (props) => {
 
   const {query} = useRouter();
+      const [seconds, setSeconds] = useState(0);
+
+    const [isOpen, setIsOpen] = useState(true);
+
+    function toggleModal() {
+        setIsOpen(!isOpen);
+    }
+
+      useEffect(() => {
+        const interval = setInterval(() => {
+            setSeconds(seconds => seconds + 1000);
+        }, 1000);
+        return () => clearInterval(interval);
+    }, []);
+
+  
  const modalstyle = [
 {
         overlay: {
