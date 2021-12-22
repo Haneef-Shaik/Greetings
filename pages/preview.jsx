@@ -16,6 +16,11 @@ import DialogTitle from '@mui/material/DialogTitle';
 import Slide from '@mui/material/Slide';
 
 export default function Home() {
+    
+    const Transition = React.forwardRef(function Transition(props, ref) {
+    return <Slide direction="up" ref={ref} {...props} />;
+});
+    
     const {query} = useRouter();
 
     const [seconds, setSeconds] = useState(0);
